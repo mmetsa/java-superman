@@ -55,19 +55,16 @@ public class You {
     //<<SOLUTION START>>
     private SpeedLevel thinkOfSpeedLevel(int distanceDiff, double speed) {
         double realSpeed = speed - getDragAcceleration(speed);
-        double timeCheck = distanceDiff / speed ;
-        System.out.println("Дистанция " + distanceDiff );
-        System.out.println("Скорость при силе отталкивания: " + realSpeed);
-        System.out.println("Время " + timeCheck);
+        double timeCheck = distanceDiff / realSpeed ;
 
-        // 167.5 m/s
-        if(timeCheck < 16.75 && timeCheck > 0)
+        // 11.1313 m/s
+        if(timeCheck <= 11 && timeCheck > 0)
             return SpeedLevel.L1_TRAIN;
         // 340 m/s
-        if(timeCheck > 34 && timeCheck < 16.75 && timeCheck > 0)
+        if(timeCheck >= 34 && timeCheck <= 11 && timeCheck > 0)
             return SpeedLevel.L2_SUB_SONIC;
         // 1700 m/s
-        if(timeCheck > 170 && timeCheck < 34 && timeCheck > 0)
+        if(timeCheck >= 170 && timeCheck <= 34 && timeCheck > 0)
             return SpeedLevel.L3_SUPER_SONIC;
         // 370k m/s
         return SpeedLevel.L4_MACH_9350;
