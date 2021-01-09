@@ -255,7 +255,7 @@ public class You {
     }
 
 
-    // Optimal way: Dijkstra Shortest Path Algorithm. In order to Optimize pathfinding
+    // Optimal way: Dijkstra Shortest Path Algorithm. In order to Optimize pathfinding, but it`s not what your test want
     public void sortPositions() {
         Collections.sort(targetsToCapture, new Comparator<Position>() {
             @Override
